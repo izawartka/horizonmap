@@ -1,0 +1,42 @@
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+}
+
+.toolbar-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.progress-indicator-cont {
+    height: 0;
+}
+
+.progress-indicator {
+    height: fit-content;
+    padding: 4px 8px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1000;
+    position: relative;
+}
+
+.progress-indicator.in-progress {
+    background-color: rgb(151, 105, 19);
+    opacity: 1;
+}
+
+.progress-indicator.ready {
+    background-color: rgb(85, 204, 85);
+    opacity: 1;
+    animation: fadeOut 1s ease-in-out 2s forwards; /* Start fading out after 2 seconds */
+}
