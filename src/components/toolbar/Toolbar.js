@@ -5,12 +5,12 @@ import MarkerMove from './MakrerMove';
 import RadiusSlider from './RadiusSlider';
 import DisplayPosition from './DisplayPosition';
 import Constants from '../../helpers/constants';
-import ShowOverlayCheckbox from './ShowOverlayCheckbox';
+import ToggleOverlay from './ToggleOverlay';
 import QualitySlider from './QualitySlider';
 import RaysSlider from './RaysSlider';
 import HeightOffsetSlider from './HeightOffsetSlider';
 import ProgressIndicator from './ProgressIndicator';
-import CurvatureCheckbox from './CurvatureCheckbox';
+import ToggleCurvature from './ToggleCurvature';
 
 export default function Toolbar() {
     const { map } = useContext(MainContext);
@@ -29,9 +29,9 @@ export default function Toolbar() {
                 <QualitySlider />
                 <RaysSlider />
                 <HeightOffsetSlider />
-                <CurvatureCheckbox />
+                <ToggleCurvature />
                 { Constants.debug.displayPosition && <DisplayPosition /> }
-                <ShowOverlayCheckbox />
+                <ToggleOverlay />
             </div>
             <div className='progress-indicator-cont'>
                 <ProgressIndicator />
